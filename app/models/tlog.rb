@@ -1,0 +1,2 @@
+class Tlog < ApplicationRecord
+end

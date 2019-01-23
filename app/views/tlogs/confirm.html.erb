@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/assets/index.css">
+  </head>
+  <body>
+    <header>
+      <div class="header_box">
+        <div class="home table_cell"></div>
+        <div class="main_image table_cell"><img src="/assets/twitter.png"/></div>
+        <div class="top_right table_cell">
+        
+        </div>
+      </div>
+    </header>
+    <nav>
+    
+    </nav>
+    <section>
+        <article style="background-color: #F8E0E0">
+          <div class="profile"><img src="/assets/twitter_profile.png"/></div>
+          <div class="nickname">nickname</div>
+          
+          <%= form_with(model: @tlog, url: tlogs_path, local: true) do |form| %>
+            <%= form.hidden_field :content %>
+            <div class="content"><%=@tlog.content%></div>
+            <%= form.submit "create tlog", class: "createButton button"%>
+          <% end %>
+          <%= form_with(model: @tlog, url: new_tlog_path, local: true, method: 'get') do |form| %>
+            <%= form.hidden_field :content %>
+            <%= form.submit 'back', name: 'back', class: 'backButton button' %>
+          <% end %>
+        </article>
+    </section>
+    <aside>
+      
+    </aside>
+  </body>  
+</html>
+
+
+
+<h3>Send as follows:</h3>
+
+  
+  <p></p>
+  
+

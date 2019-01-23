@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/assets/index.css">
+  </head>
+  <body>
+    <header>
+      <div class="header_box">
+        <div class="home table_cell"></div>
+        <div class="main_image table_cell"><img src="/assets/twitter.png"/></div>
+        <div class="top_right table_cell">
+        
+        </div>
+      </div>
+    </header>
+    <nav>
+    
+    </nav>
+    <section>
+        <div class="new_tlog_textbox">
+          <div class="profile"><img src="/assets/twitter_profile.png"/></div>
+          <%= form_with(model: @tlog, local: true, url: choose_new_or_edit) do |form| %>  
+          <%= form.text_area :content, class: 'tlog_textarea' %>
+          <%= form.submit "create tlog", class: 'createButton button' %>
+          <% end %>
+        </div>
+    </section>
+    <aside>
+      
+    </aside>
+  </body>  
+</html>
+
