@@ -1,8 +1,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/assets/index.css">
+    <!--<link rel="stylesheet" type="text/css" href="/assets/index.css">-->
     
+    <%= stylesheet_link_tag 'index' %>
   </head>
   <body>
     <header>
@@ -24,7 +25,7 @@
       <% @tlog.each do |tlog| %>
         <article>
           <div style="display:none" class="tlog_id"><%= tlog.id %></div>
-          <div class="profile"><img src="/assets/twitter_profile.png"/></div>
+          <div class="profile"><%= image_tag('twitter_profile.png') %></div>
           <div class="nickname">nickname</div>
           <div class="content"><%= tlog.content %></div>
           <%= link_to '<button class="deleteButton button">delete</button>'.html_safe, tlog_path(tlog.id), method: :delete, data: {confirm: 'Are you sure delete?'} %>
