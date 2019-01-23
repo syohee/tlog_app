@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/assets/index.css">
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('index.css')">
     
   </head>
   <body>
@@ -9,7 +9,8 @@
       <div class="header_box">
         <div class="home table_cell"></div>
         <div class="main_image table_cell">
-          <img src="/assets/twitter.png"/>
+          <!--<img src="/assets/twitter.png"/>-->
+          <%= image_tag('twitter.png') %>
         </div>
         <div class="top_right table_cell">
         <%= link_to '<button class="newButton button">new tlog</button>'.html_safe, new_tlog_path %>
