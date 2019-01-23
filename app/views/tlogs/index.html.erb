@@ -2,12 +2,16 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="/assets/index.css">
+    
   </head>
   <body>
     <header>
       <div class="header_box">
         <div class="home table_cell"></div>
-        <div class="main_image table_cell"><img src="/assets/twitter.png"/></div>
+        <div class="main_image table_cell">
+          <!--<img src="/assets/twitter.png"/>-->
+          <%= asset_path('twitter.png') %>
+        </div>
         <div class="top_right table_cell">
         <%= link_to '<button class="newButton button">new tlog</button>'.html_safe, new_tlog_path %>
         </div>
