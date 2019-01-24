@@ -20,8 +20,18 @@
         <div class="new_tlog_textbox">
           <div class="profile"><%= image_tag('twitter_profile.png') %></div>
           <%= form_with(model: @tlog, local: true, url: choose_new_or_edit) do |form| %>  
-          <%= form.text_area :content, class: 'tlog_textarea' %>
-          <%= form.submit "edit tlog", class: 'createButton button' %>
+            <%= form.text_area :content, class: 'tlog_textarea' %>
+            <%= form.submit "edit tlog", class: 'createButton button' %>
+          
+            <% if @tlog.errors.any? %>
+              <div id="error_explanation">
+                <ul>
+                  <% @tlog.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
           <% end %>
         </div>
     </section>

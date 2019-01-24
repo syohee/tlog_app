@@ -12,11 +12,11 @@ header { width: 100%; height: 50px; background: white; border-top: 1px silver so
 
 nav { float: left; width: 20%; margin-top: 1%; margin-left: 4%; background-color: white; height: 100%;}
 
-section { float: left; width: 50%; margin: 1%; }
+section { float: left; width: 50%; margin: 1%; height: 100%;}
 
 aside { float: left; width: 20%; margin-top: 1%; margin-right: 4%; background-color: white; height: 100%;}
 
-.new_tlog_textbox { background-color: #F8E0E0; border-bottom: 1px #F2F2F2 solid; height: 150px; width: 100%; position: relative;}
+.new_tlog_textbox { background-color: #F8E0E0; border-bottom: 1px #F2F2F2 solid; height: auto; min-height: 150px; width: 100%; position: relative;}
 .tlog_textarea { border-radius: 5px; margin: 10px; resize: none; width: 80%; min-height: 80px; border: 1px silver solid; overflow: visible;}
 .createButton { position: absolute; right: 10px; bottom: 12px; }
 .backButton {position: absolute; right: 120px; bottom: 12px; }
@@ -26,7 +26,7 @@ article { background-color: white; border-bottom: 1px #F2F2F2 solid;  min-height
 .profile { background-color: skyblue; float: left; width: 50px; height: 50px; border-radius: 50%; margin: 10px;}
 .profile img { width: 100%; }
 .nickname { padding: 10px; font-weight: bold; }
-.content { padding: 5px; word-break: break-all;}
+.content { padding: 5px; word-break: break-all; min-height: 80px;}
 .deleteButton { position: absolute; top: 10px; right: 10px; }
 .editButton { position: absolute; top: 10px; right: 85px; }
 
@@ -50,3 +50,7 @@ article { background-color: white; border-bottom: 1px #F2F2F2 solid;  min-height
   background-color: #B40431;
   transform: translateY(2px);
 }
+
+ul { list-style: none; }
+
+#error_explanation { position: absolute; top: 85px;}
